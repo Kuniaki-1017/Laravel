@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+//ブログ一覧画面を表示
+//Route::httpメソッド名（'エンドポイント', 実行したい関数）
+//@showlist→BlogControlleのshowListメソッド
+//->name('blogs')はRouteに名前をつけている
+Route::get('/', 'BlogController@showList')->name('blogs');
